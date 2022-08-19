@@ -9,6 +9,8 @@
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
+ * @runtime O(n) - store diff in map to check if number exists like this
+ * @space O(1)
  */
 var twoSum = function(nums, target) {
     // handling edge cases
