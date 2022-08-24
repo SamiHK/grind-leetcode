@@ -6,38 +6,40 @@
 
 // @lc code=start
 
-var MyQueue = function() {
-    
-};
+
 
 /** 
- * @param {number} x
- * @return {void}
+ * Your MyQueue object will be instantiated and called as such:
+ * var obj = new MyQueue()
+ * obj.push(x)
+ * var param_2 = obj.pop()
+ * var param_3 = obj.peek()
+ * var param_4 = obj.empty()
  */
-MyQueue.prototype.push = function(x) {
-    
-};
 
-/**
- * @return {number}
- */
-MyQueue.prototype.pop = function() {
+ class MyQueue{
+    constructor(){
+        this.stack1 = [];
+    }
     
-};
-
-/**
- * @return {number}
- */
-MyQueue.prototype.peek = function() {
+    push(x){
+        //stack1 is used for pushing elements and as serving queue
+        this.stack1.push(x);
+    }
     
-};
-
-/**
- * @return {boolean}
- */
-MyQueue.prototype.empty = function() {
+    pop(){
+        return this.stack1.shift();
+    }
     
-};
+    peek(){
+        return (this.stack1.length!==0) ? this.stack1[0] : null;
+    }
+    
+    empty(){
+        //stack1 is used for pushing elements and as serving queue
+        return this.stack1.length === 0 ? true: false;
+    }
+}
 
 /** 
  * Your MyQueue object will be instantiated and called as such:
