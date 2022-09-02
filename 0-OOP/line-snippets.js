@@ -24,6 +24,31 @@ for (let index = 0; index < object.length; index++) {
     console.log("key: " + index + ", value: " + element);
 }
 
+// array map
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(item => item * 2);
+console.log(doubled); // [2, 4, 6, 8]
+
+// array filter
+const students = [
+    { name: 'Quincy', grade: 96 },
+    { name: 'Jason', grade: 84 },
+    { name: 'Alexis', grade: 100 },
+    { name: 'Sam', grade: 65 },
+    { name: 'Katie', grade: 90 }
+  ];
+  
+const studentGrades = students.filter(student => student.grade >= 80)
+console.log(studentGrades) // [ { name: 'Quincy', grade: 96 }, { name: 'Alexis', grade: 100 }, { name: 'Katie', grade: 90 } ]
+
+// array reduce
+const x = [1, 2, 3, 4];
+const sum = x.reduce(function (result, item) {
+  return result + item;
+}, 0);
+console.log(sum); // 10
+
+
 // array of tuples to plain array
 let res = [ [1,2], [3,4], [5,6] ];
 
